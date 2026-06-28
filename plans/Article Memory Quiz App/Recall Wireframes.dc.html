@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; font-family:'Patrick Hand', cursive; -webkit-font-smoothing:antialiased; }
+  .wf-h { font-family:'Gaegu', cursive; }
+</style>
+</helmet>
+
+<!-- ===================== TITLE ===================== -->
+<div style="position:absolute;left:80px;top:0px;width:900px">
+  <div class="wf-h" style="font-size:40px;font-weight:700;color:#2a2a2a">Recall — read-it-later + memory quiz</div>
+  <div style="font-size:18px;color:#777;margin-top:2px">Low-fi wireframes · save URLs → AI summary → spaced-repetition recall. Pan around; each phone is one screen.</div>
+</div>
+
+<!-- ===================== SECTION 1 HEADER ===================== -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:78px;width:1500px">
+  <div class="wf-h" style="font-size:26px;font-weight:700;color:#2a2a2a">1 · Auth &amp; Capture</div>
+  <div style="font-size:16px;color:#999">Sign in with Google or email, then save links from anywhere — saving happens inline, no waiting screen.</div>
+</div>
+
+<!-- ---------- A0a: Login ---------- -->
+<div style="position:absolute;left:80px;top:140px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Log in</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;padding:26px 22px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:14px">
+        <div style="width:56px;height:56px;border:2.5px solid #2a2a2a;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px">◎</div>
+        <div class="wf-h" style="font-size:26px;font-weight:700;color:#2a2a2a">Welcome back</div>
+        <div style="font-size:14px;color:#999">Log in to keep your streak alive</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px"><span style="font-size:13px;color:#aaa">Email</span><div style="border:1.5px solid #d8d8d8;border-radius:11px;padding:12px;font-size:14px;color:#888">you@email.com</div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;color:#aaa">Password</span><div style="border:1.5px solid #d8d8d8;border-radius:11px;padding:12px;font-size:14px;color:#888;display:flex;justify-content:space-between"><span>••••••••</span><span style="color:#aaa">👁</span></div></div>
+      <div style="text-align:right;font-size:13px;color:#e8623d">Forgot password?</div>
+      <div style="background:#e8623d;color:#fff;border-radius:12px;padding:13px;text-align:center;font-size:16px">Log in</div>
+      <div style="display:flex;align-items:center;gap:10px;margin:2px 0"><div style="flex:1;height:1.5px;background:#eee"></div><span style="font-size:12px;color:#bbb">or</span><div style="flex:1;height:1.5px;background:#eee"></div></div>
+      <div style="border:1.5px solid #2a2a2a;border-radius:12px;padding:12px;text-align:center;font-size:15px;color:#2a2a2a;display:flex;align-items:center;justify-content:center;gap:8px"><span style="font-weight:700;font-family:sans-serif">G</span> Continue with Google</div>
+    </div>
+    <div style="padding:0 22px 26px;text-align:center;font-size:14px;color:#999">New here? <span style="color:#e8623d">Create an account</span></div>
+  </div>
+</div>
+
+<!-- ---------- A0b: Sign up ---------- -->
+<div style="position:absolute;left:460px;top:140px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Sign up</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;padding:24px 22px;display:flex;flex-direction:column;gap:13px">
+      <div class="wf-h" style="font-size:25px;font-weight:700;color:#2a2a2a;margin-top:6px">Create account</div>
+      <div style="font-size:14px;color:#999;margin-top:-6px">Start saving &amp; remembering articles</div>
+      <div style="border:1.5px solid #2a2a2a;border-radius:12px;padding:12px;text-align:center;font-size:15px;color:#2a2a2a;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:6px"><span style="font-weight:700;font-family:sans-serif">G</span> Sign up with Google</div>
+      <div style="display:flex;align-items:center;gap:10px;margin:2px 0"><div style="flex:1;height:1.5px;background:#eee"></div><span style="font-size:12px;color:#bbb">or with email</span><div style="flex:1;height:1.5px;background:#eee"></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;color:#aaa">Name</span><div style="border:1.5px solid #d8d8d8;border-radius:11px;padding:11px;font-size:14px;color:#888">Your name</div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;color:#aaa">Email</span><div style="border:1.5px solid #d8d8d8;border-radius:11px;padding:11px;font-size:14px;color:#888">you@email.com</div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;color:#aaa">Password</span><div style="border:1.5px solid #d8d8d8;border-radius:11px;padding:11px;font-size:14px;color:#888">8+ characters</div></div>
+      <div style="background:#e8623d;color:#fff;border-radius:12px;padding:13px;text-align:center;font-size:16px;margin-top:4px">Create account</div>
+      <div style="font-size:11px;color:#bbb;text-align:center;line-height:1.3">By continuing you agree to the Terms &amp; Privacy Policy</div>
+    </div>
+    <div style="padding:0 22px 24px;text-align:center;font-size:14px;color:#999">Have an account? <span style="color:#e8623d">Log in</span></div>
+  </div>
+</div>
+
+<!-- ---------- A1: Welcome / Onboarding ---------- -->
+<div style="position:absolute;left:840px;top:140px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Welcome</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;gap:18px;text-align:center">
+      <div style="width:64px;height:64px;border:2.5px solid #2a2a2a;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px">◎</div>
+      <div class="wf-h" style="font-size:34px;font-weight:700;color:#2a2a2a;line-height:1">Recall</div>
+      <div style="font-size:18px;color:#777;line-height:1.2">Save it. Skim the AI gist.<br>Actually remember it.</div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:10px;margin-top:8px">
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:30px;height:30px;border:1.5px solid #bbb;border-radius:8px;display:flex;align-items:center;justify-content:center">＋</div><span style="font-size:15px;color:#555">Paste any link to save</span></div>
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:30px;height:30px;border:1.5px solid #bbb;border-radius:8px;display:flex;align-items:center;justify-content:center">✦</div><span style="font-size:15px;color:#555">AI summarizes &amp; tags</span></div>
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:30px;height:30px;border:1.5px solid #bbb;border-radius:8px;display:flex;align-items:center;justify-content:center">↻</div><span style="font-size:15px;color:#555">Quiz keeps it fresh</span></div>
+      </div>
+    </div>
+    <div style="padding:18px 22px 26px;display:flex;flex-direction:column;gap:10px">
+      <div style="background:#e8623d;color:#fff;border-radius:12px;padding:13px;text-align:center;font-size:17px">Get started</div>
+      <div style="text-align:center;font-size:14px;color:#999">Import bookmarks &amp; read-later</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- A2: Paste from clipboard ---------- -->
+<div style="position:absolute;left:1220px;top:140px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Add — expanded preview (optional)</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;padding:18px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:13px;color:#999">✕ Cancel</span><span class="wf-h" style="font-size:20px;font-weight:700;color:#2a2a2a">Add article</span><span style="font-size:13px;color:#999"> </span></div>
+      <div style="border:1.5px solid #d8d8d8;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px">
+        <span style="font-size:13px;color:#aaa">Link</span>
+        <span style="font-size:14px;color:#2a2a2a">https://nautil.us/the-deep-roots-of…</span>
+      </div>
+      <div style="background:#fff4f0;border:1.5px dashed #e8623d;border-radius:12px;padding:11px;display:flex;align-items:center;gap:8px"><span style="color:#e8623d;font-size:16px">📋</span><span style="font-size:15px;color:#e8623d">Paste link from clipboard</span></div>
+      <span style="font-size:13px;color:#aaa">Preview</span>
+      <div style="border:1.5px solid #d8d8d8;border-radius:12px;overflow:hidden">
+        <div style="height:96px;background:repeating-linear-gradient(45deg,#eee,#eee 6px,#f7f7f7 6px,#f7f7f7 12px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#aaa">og:image</div>
+        <div style="padding:10px;display:flex;flex-direction:column;gap:5px">
+          <span style="font-size:15px;color:#2a2a2a;line-height:1.15">The Deep Roots of Human Memory</span>
+          <span style="font-size:12px;color:#999;font-family:monospace">nautil.us · 11 min read</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:#777"><span style="color:#e8623d">✦</span> AI will summarize &amp; auto-categorize</div>
+    </div>
+    <div style="padding:14px 20px 24px"><div style="background:#e8623d;color:#fff;border-radius:12px;padding:13px;text-align:center;font-size:17px">Save article</div></div>
+  </div>
+</div>
+
+<!-- ---------- A4: Share sheet ---------- -->
+<div style="position:absolute;left:1600px;top:140px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">From another app (share-sheet)</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column;position:relative">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;background:repeating-linear-gradient(45deg,#f0f0f0,#f0f0f0 7px,#f6f6f6 7px,#f6f6f6 14px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:12px;color:#bbb">browser / news app behind</div>
+    <div style="position:absolute;left:10px;right:10px;bottom:10px;background:#fff;border:2px solid #2a2a2a;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:14px;box-shadow:0 -4px 14px rgba(0,0,0,.12)">
+      <div style="width:40px;height:4px;background:#ddd;border-radius:2px;align-self:center"></div>
+      <div style="font-size:13px;color:#999">Share to</div>
+      <div style="display:flex;gap:14px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px"><div style="width:48px;height:48px;border-radius:14px;background:#e8623d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px">◎</div><span style="font-size:12px;color:#2a2a2a">Recall</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px"><div style="width:48px;height:48px;border-radius:14px;border:1.5px solid #ccc"></div><span style="font-size:12px;color:#aaa">Msg</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px"><div style="width:48px;height:48px;border-radius:14px;border:1.5px solid #ccc"></div><span style="font-size:12px;color:#aaa">Mail</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px"><div style="width:48px;height:48px;border-radius:14px;border:1.5px solid #ccc"></div><span style="font-size:12px;color:#aaa">Copy</span></div>
+      </div>
+      <div style="border-top:1.5px solid #eee;padding-top:12px;display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:14px;color:#2a2a2a">Saved to Recall ✓ — tag now?</span>
+        <div style="display:flex;flex-wrap:wrap;gap:7px">
+          <span style="border:1.5px solid #bbb;border-radius:999px;padding:3px 12px;font-size:13px;color:#555">Read later</span>
+          <span style="border:1.5px solid #bbb;border-radius:999px;padding:3px 12px;font-size:13px;color:#555">Quiz me</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 2 HEADER ===================== -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:820px;width:1500px">
+  <div class="wf-h" style="font-size:26px;font-weight:700;color:#2a2a2a">2 · Home — “what do I review today?” (3 approaches) + Library</div>
+  <div style="font-size:16px;color:#999">Spaced-repetition surfaces what's due; streaks pull you back.</div>
+</div>
+
+<!-- ---------- B1: Home — dashboard ---------- -->
+<div style="position:absolute;left:80px;top:884px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Home A — task dashboard</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:13px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div><div style="font-size:13px;color:#999">Good morning</div><div class="wf-h" style="font-size:22px;font-weight:700;color:#2a2a2a">Today</div></div>
+        <div style="border:1.5px solid #e8623d;border-radius:999px;padding:4px 11px;font-size:14px;color:#e8623d">🔥 7-day streak</div>
+      </div>
+      <div style="border:2px solid #2a2a2a;border-radius:14px;padding:10px;display:flex;align-items:center;gap:8px">
+        <span style="color:#aaa;font-size:15px">🔗</span>
+        <span style="flex:1;font-size:14px;color:#bbb">Paste a link to save…</span>
+        <span style="background:#e8623d;color:#fff;border-radius:9px;padding:7px 15px;font-size:14px">Save</span>
+      </div>
+      <div style="background:#fff4f0;border:1.5px dashed #e8623d;border-radius:10px;padding:8px 11px;display:flex;align-items:center;gap:8px;margin-top:-4px"><span style="color:#e8623d">📋</span><span style="font-size:13px;color:#e8623d;flex:1">Paste from clipboard — nautil.us/…</span><span style="font-size:12px;color:#e8623d">tap</span></div>
+      <div style="background:#fff4f0;border:1.5px solid #e8623d;border-radius:16px;padding:15px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:15px;color:#2a2a2a">5 cards due for review</div>
+        <div style="display:flex;gap:5px"><div style="height:7px;flex:1;background:#e8623d;border-radius:4px"></div><div style="height:7px;flex:1;background:#e8623d;border-radius:4px"></div><div style="height:7px;flex:1;background:#f3c0b0;border-radius:4px"></div><div style="height:7px;flex:1;background:#f3c0b0;border-radius:4px"></div><div style="height:7px;flex:1;background:#f3c0b0;border-radius:4px"></div></div>
+        <div style="background:#e8623d;color:#fff;border-radius:10px;padding:11px;text-align:center;font-size:16px">Start review →</div>
+      </div>
+      <div style="font-size:13px;color:#999">Recently saved</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="border:1.5px solid #e8623d;border-radius:12px;padding:9px;display:flex;gap:10px;align-items:center;background:#fffaf8">
+          <div style="width:44px;height:44px;border-radius:8px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div>
+          <div style="flex:1"><div style="font-size:14px;color:#2a2a2a;line-height:1.1">The Deep Roots of Human Memory</div>
+            <div style="display:inline-flex;align-items:center;gap:5px;margin-top:6px;background:#fff4f0;border:1px solid #f0b89e;border-radius:999px;padding:2px 9px;font-size:11px;color:#e8623d">✦ AI summarizing…</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center"><div style="width:40px;height:40px;border-radius:8px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div><div style="flex:1"><div style="height:7px;width:70%;background:#ddd;border-radius:4px"></div><div style="height:6px;width:35%;background:#eee;border-radius:4px;margin-top:6px"></div></div></div>
+      </div>
+    </div>
+    <div style="height:52px;border-top:1.5px solid #e5e5e5;display:flex;align-items:center;justify-content:space-around;font-size:11px;color:#999">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2px;color:#e8623d"><span style="font-size:16px">⌂</span>Home</div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-size:16px">▤</span>Library</div>
+      <div style="width:38px;height:38px;border-radius:50%;background:#e8623d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;margin-top:-14px">＋</div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-size:16px">↻</span>Review</div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-size:16px">◔</span>Stats</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- B2: Home — feed segmented ---------- -->
+<div style="position:absolute;left:460px;top:884px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Home B — due/library feed</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column;position:relative">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:12px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="wf-h" style="font-size:22px;font-weight:700;color:#2a2a2a">Recall</span><span style="font-size:14px;color:#e8623d">🔥 7</span></div>
+      <div style="display:flex;border:1.5px solid #d8d8d8;border-radius:10px;overflow:hidden;font-size:14px">
+        <div style="flex:1;background:#2a2a2a;color:#fff;text-align:center;padding:8px">Due (5)</div>
+        <div style="flex:1;text-align:center;padding:8px;color:#777">Library</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <div style="border:1.5px solid #d8d8d8;border-radius:12px;padding:11px;display:flex;gap:11px;align-items:center">
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #e8623d;display:flex;align-items:center;justify-content:center;font-size:12px;color:#e8623d">●●</div>
+          <div style="flex:1"><div style="font-size:14px;color:#2a2a2a;line-height:1.1">The Deep Roots of Human Memory</div><div style="font-size:12px;color:#aaa;font-family:monospace;margin-top:3px">2 cards · due now</div></div>
+        </div>
+        <div style="border:1.5px solid #d8d8d8;border-radius:12px;padding:11px;display:flex;gap:11px;align-items:center">
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #e8623d;display:flex;align-items:center;justify-content:center;font-size:12px;color:#e8623d">●</div>
+          <div style="flex:1"><div style="font-size:14px;color:#2a2a2a;line-height:1.1">How interest rates ripple out</div><div style="font-size:12px;color:#aaa;font-family:monospace;margin-top:3px">1 card · due now</div></div>
+        </div>
+        <div style="border:1.5px solid #d8d8d8;border-radius:12px;padding:11px;display:flex;gap:11px;align-items:center;opacity:.6">
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #ccc"></div>
+          <div style="flex:1"><div style="font-size:14px;color:#2a2a2a;line-height:1.1">A field guide to deep work</div><div style="font-size:12px;color:#aaa;font-family:monospace;margin-top:3px">due in 2 days</div></div>
+        </div>
+      </div>
+      <div style="border:1.5px dashed #ccc;border-radius:12px;padding:14px;text-align:center;font-size:14px;color:#aaa">Review all 5 in one go →</div>
+    </div>
+    <div style="position:absolute;right:18px;bottom:70px;width:52px;height:52px;border-radius:50%;background:#e8623d;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 3px 8px rgba(0,0,0,.2)">＋</div>
+    <div style="height:52px;border-top:1.5px solid #e5e5e5;display:flex;align-items:center;justify-content:space-around;font-size:11px;color:#999">
+      <div style="color:#e8623d">⌂ Home</div><div>▤ Library</div><div>↻ Review</div><div>◔ You</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- B3: Home — minimal card stack ---------- -->
+<div style="position:absolute;left:840px;top:884px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Home C — minimal “one job”</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;gap:8px;text-align:center;position:relative">
+      <div style="position:absolute;top:18px;right:22px;font-size:14px;color:#e8623d">🔥 7</div>
+      <div style="position:relative;width:200px;height:240px;margin-bottom:8px">
+        <div style="position:absolute;inset:0;transform:rotate(-5deg);border:1.5px solid #ddd;border-radius:16px;background:#fafafa"></div>
+        <div style="position:absolute;inset:0;transform:rotate(3deg);border:1.5px solid #ccc;border-radius:16px;background:#fcfcfc"></div>
+        <div style="position:absolute;inset:0;border:2px solid #2a2a2a;border-radius:16px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px">
+          <div style="font-size:13px;color:#aaa;font-family:monospace">CARD 1 / 3</div>
+          <div style="width:54px;height:54px;border:2px solid #e8623d;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#e8623d">?</div>
+          <div style="font-size:15px;color:#2a2a2a;line-height:1.2">Recall what you read</div>
+        </div>
+      </div>
+      <div class="wf-h" style="font-size:24px;font-weight:700;color:#2a2a2a">3 to review today</div>
+      <div style="font-size:15px;color:#999">~2 minutes</div>
+    </div>
+    <div style="padding:0 24px 18px;display:flex;flex-direction:column;gap:10px">
+      <div style="background:#e8623d;color:#fff;border-radius:12px;padding:14px;text-align:center;font-size:18px">Start</div>
+      <div style="text-align:center;font-size:14px;color:#999">Skip today</div>
+    </div>
+    <div style="height:52px;border-top:1.5px solid #e5e5e5;display:flex;align-items:center;justify-content:space-around;font-size:11px;color:#999"><div style="color:#e8623d">⌂</div><div>▤</div><div>＋</div><div>↻</div><div>◔</div></div>
+  </div>
+</div>
+
+<!-- ---------- B4: Library auto-categorized ---------- -->
+<div style="position:absolute;left:1220px;top:884px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Library — AI auto-categorized</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:13px;overflow:hidden">
+      <span class="wf-h" style="font-size:22px;font-weight:700;color:#2a2a2a">Library</span>
+      <div style="border:1.5px solid #d8d8d8;border-radius:10px;padding:9px 12px;font-size:14px;color:#aaa">⌕ Search title, tag or text…</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:15px;color:#2a2a2a">✦ Neuroscience <span style="color:#aaa;font-size:13px">8</span></span><span style="font-size:13px;color:#aaa">›</span></div>
+        <div style="display:flex;gap:9px;overflow:hidden">
+          <div style="width:96px;flex:none"><div style="height:62px;border-radius:9px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div><div style="height:6px;width:90%;background:#ddd;border-radius:3px;margin-top:6px"></div><div style="height:6px;width:60%;background:#eee;border-radius:3px;margin-top:4px"></div></div>
+          <div style="width:96px;flex:none"><div style="height:62px;border-radius:9px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div><div style="height:6px;width:80%;background:#ddd;border-radius:3px;margin-top:6px"></div><div style="height:6px;width:50%;background:#eee;border-radius:3px;margin-top:4px"></div></div>
+          <div style="width:60px;flex:none"><div style="height:62px;border-radius:9px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:15px;color:#2a2a2a">✦ Economics <span style="color:#aaa;font-size:13px">5</span></span><span style="font-size:13px;color:#aaa">›</span></div>
+        <div style="display:flex;gap:9px;overflow:hidden">
+          <div style="width:96px;flex:none"><div style="height:62px;border-radius:9px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div><div style="height:6px;width:90%;background:#ddd;border-radius:3px;margin-top:6px"></div></div>
+          <div style="width:96px;flex:none"><div style="height:62px;border-radius:9px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div><div style="height:6px;width:70%;background:#ddd;border-radius:3px;margin-top:6px"></div></div>
+          <div style="width:60px;flex:none"><div style="height:62px;border-radius:9px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:15px;color:#2a2a2a">✦ Productivity <span style="color:#aaa;font-size:13px">6</span></span><span style="font-size:13px;color:#aaa">›</span></div>
+        <div style="display:flex;gap:9px;overflow:hidden">
+          <div style="width:96px;flex:none"><div style="height:62px;border-radius:9px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div></div>
+          <div style="width:96px;flex:none"><div style="height:62px;border-radius:9px;background:repeating-linear-gradient(45deg,#eee,#eee 5px,#f7f7f7 5px,#f7f7f7 10px)"></div></div>
+        </div>
+      </div>
+    </div>
+    <div style="height:52px;border-top:1.5px solid #e5e5e5;display:flex;align-items:center;justify-content:space-around;font-size:11px;color:#999"><div>⌂ Home</div><div style="color:#e8623d">▤ Library</div><div>↻ Review</div><div>◔ You</div></div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 3 HEADER ===================== -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:1564px;width:1500px">
+  <div class="wf-h" style="font-size:26px;font-weight:700;color:#2a2a2a">3 · Read — in-app browser &amp; layered AI summary</div>
+  <div style="font-size:16px;color:#999">Glance the gist, dive into the real page, highlight as you go.</div>
+</div>
+
+<!-- ---------- C1: Article detail / summary ---------- -->
+<div style="position:absolute;left:80px;top:1628px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Article — AI summary</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;overflow:hidden;display:flex;flex-direction:column">
+      <div style="height:120px;background:repeating-linear-gradient(45deg,#eee,#eee 6px,#f7f7f7 6px,#f7f7f7 12px);display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#aaa;position:relative">og:image<span style="position:absolute;top:10px;left:14px;font-size:16px;color:#2a2a2a">‹</span><span style="position:absolute;top:10px;right:14px;font-size:16px;color:#2a2a2a">⋯</span></div>
+      <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div class="wf-h" style="font-size:21px;font-weight:700;color:#2a2a2a;line-height:1.1">The Deep Roots of Human Memory</div>
+        <div style="font-size:12px;color:#999;font-family:monospace">nautil.us · 11 min · saved 2d ago</div>
+        <div style="background:#fff4f0;border-radius:12px;padding:12px"><span style="font-size:13px;color:#e8623d">✦ TL;DR</span><div style="font-size:15px;color:#2a2a2a;margin-top:5px;line-height:1.3">Memory isn't storage — it's reconstruction, shaped each time you recall.</div></div>
+        <div style="font-size:13px;color:#999">Key points</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;gap:8px"><span style="color:#e8623d">•</span><span style="font-size:14px;color:#444;line-height:1.25">Recall physically rewrites the memory trace.</span></div>
+          <div style="display:flex;gap:8px"><span style="color:#e8623d">•</span><span style="font-size:14px;color:#444;line-height:1.25">Spacing reviews beats cramming for retention.</span></div>
+          <div style="display:flex;gap:8px"><span style="color:#e8623d">•</span><span style="font-size:14px;color:#444;line-height:1.25">Sleep consolidates the day's encoding.</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:12px 16px 22px;display:flex;gap:10px;border-top:1.5px solid #eee">
+      <div style="flex:1;border:1.5px solid #2a2a2a;border-radius:11px;padding:12px;text-align:center;font-size:15px;color:#2a2a2a">Read full ↗</div>
+      <div style="flex:1;background:#e8623d;color:#fff;border-radius:11px;padding:12px;text-align:center;font-size:15px">Quiz me</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- C2: In-app browser ---------- -->
+<div style="position:absolute;left:460px;top:1628px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">In-app browser (read real page)</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column;position:relative">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="height:40px;border-bottom:1.5px solid #e5e5e5;display:flex;align-items:center;gap:8px;padding:0 12px">
+      <span style="font-size:15px;color:#2a2a2a">‹</span>
+      <div style="flex:1;background:#f2f2f2;border-radius:8px;padding:6px 10px;font-size:12px;color:#888;font-family:monospace;text-align:center">🔒 nautil.us/memory</div>
+      <span style="font-size:15px;color:#2a2a2a">↻</span>
+    </div>
+    <div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:9px;overflow:hidden">
+      <div style="height:14px;width:85%;background:#e6e6e6;border-radius:4px"></div>
+      <div style="height:80px;background:repeating-linear-gradient(45deg,#eee,#eee 6px,#f7f7f7 6px,#f7f7f7 12px);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:#bbb;margin:4px 0">article figure</div>
+      <div style="height:9px;width:100%;background:#ededed;border-radius:4px"></div>
+      <div style="height:9px;width:96%;background:#ededed;border-radius:4px"></div>
+      <div style="height:9px;width:100%;background:#fbe2d8;border-radius:4px"></div>
+      <div style="height:9px;width:70%;background:#fbe2d8;border-radius:4px"></div>
+      <div style="height:9px;width:98%;background:#ededed;border-radius:4px"></div>
+      <div style="height:9px;width:88%;background:#ededed;border-radius:4px"></div>
+      <div style="height:9px;width:93%;background:#ededed;border-radius:4px"></div>
+    </div>
+    <div style="position:absolute;left:14px;right:14px;bottom:64px;background:#2a2a2a;color:#fff;border-radius:12px;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;font-size:13px;box-shadow:0 3px 10px rgba(0,0,0,.2)"><span>✦ Show AI summary</span><span style="color:#f3a892">▴</span></div>
+    <div style="height:48px;border-top:1.5px solid #e5e5e5;display:flex;align-items:center;justify-content:space-around;font-size:13px;color:#777"><span>✎ Highlight</span><span>🔖 Saved</span><span>↗ Share</span></div>
+  </div>
+</div>
+
+<!-- ---------- C3: Layered summary depth ---------- -->
+<div style="position:absolute;left:840px;top:1628px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Summary depth — layered</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:13px;overflow:hidden">
+      <div style="display:flex;align-items:center;gap:8px"><span style="font-size:15px;color:#2a2a2a">‹</span><span class="wf-h" style="font-size:18px;font-weight:700;color:#2a2a2a">Summary</span></div>
+      <div style="display:flex;border:1.5px solid #d8d8d8;border-radius:10px;overflow:hidden;font-size:13px">
+        <div style="flex:1;background:#2a2a2a;color:#fff;text-align:center;padding:7px">TL;DR</div>
+        <div style="flex:1;text-align:center;padding:7px;color:#777">Key points</div>
+        <div style="flex:1;text-align:center;padding:7px;color:#777">Full notes</div>
+      </div>
+      <div style="background:#fff4f0;border-radius:12px;padding:13px;font-size:16px;color:#2a2a2a;line-height:1.35">Memory is reconstruction, not playback — every recall reshapes it, so spaced review beats re-reading.</div>
+      <div style="border:1.5px dashed #ccc;border-radius:12px;padding:13px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:#888">▾ Expand to key points</div>
+      <div style="margin-top:auto;border:1.5px solid #d8d8d8;border-radius:12px;padding:12px;display:flex;align-items:center;gap:10px"><span style="color:#e8623d;font-size:16px">🔊</span><div style="flex:1"><div style="font-size:14px;color:#2a2a2a">Listen to summary</div><div style="font-size:12px;color:#aaa;font-family:monospace">0:48</div></div><span style="font-size:18px;color:#2a2a2a">▷</span></div>
+    </div>
+    <div style="padding:12px 16px 22px"><div style="background:#e8623d;color:#fff;border-radius:11px;padding:13px;text-align:center;font-size:16px">Quiz me on this →</div></div>
+  </div>
+</div>
+
+<!-- post-it -->
+<div style="position:absolute;left:1220px;top:1660px;width:230px;background:#fef4a8;padding:14px;font-size:15px;line-height:1.35;color:#5a4a00;box-shadow:0 1px 3px rgba(0,0,0,.12);transform:rotate(-1.5deg)">Why a built-in browser? Keeping reading in-app means we can capture highlights → those become the best quiz cards later. The summary stays one tap away while reading.</div>
+
+<!-- ===================== SECTION 4 HEADER ===================== -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:2308px;width:1500px">
+  <div class="wf-h" style="font-size:26px;font-weight:700;color:#2a2a2a">4 · Recall — flashcards, quiz, streaks &amp; stats</div>
+  <div style="font-size:16px;color:#999">The core loop: spaced flashcards graded by feel, gamified to keep the streak alive.</div>
+</div>
+
+<!-- ---------- D1: Flashcard front/reveal ---------- -->
+<div style="position:absolute;left:80px;top:2372px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Flashcard — reveal &amp; grade</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="padding:14px 16px 0;display:flex;align-items:center;gap:10px"><span style="font-size:15px;color:#aaa">✕</span><div style="flex:1;height:6px;background:#eee;border-radius:3px;overflow:hidden"><div style="width:40%;height:100%;background:#e8623d"></div></div><span style="font-size:13px;color:#aaa;font-family:monospace">2/5</span></div>
+    <div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:14px">
+      <div style="border:1.5px solid #e8623d;border-radius:999px;padding:3px 11px;font-size:13px;color:#e8623d;align-self:flex-start">from “Human Memory”</div>
+      <div style="flex:1;border:2px solid #2a2a2a;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:13px;color:#aaa;font-family:monospace">QUESTION</span>
+        <div class="wf-h" style="font-size:21px;color:#2a2a2a;line-height:1.2">Why does spaced review beat cramming?</div>
+        <div style="border-top:1.5px dashed #ddd;padding-top:14px;margin-top:4px"><span style="font-size:13px;color:#aaa;font-family:monospace">ANSWER</span><div style="font-size:15px;color:#444;margin-top:6px;line-height:1.3">Each spaced recall rebuilds the trace, strengthening long-term retention more than massed repetition.</div></div>
+      </div>
+    </div>
+    <div style="padding:12px 16px 22px;display:flex;gap:8px">
+      <div style="flex:1;border:1.5px solid #c0392b;color:#c0392b;border-radius:10px;padding:10px;text-align:center;font-size:13px">Again</div>
+      <div style="flex:1;border:1.5px solid #999;color:#666;border-radius:10px;padding:10px;text-align:center;font-size:13px">Hard</div>
+      <div style="flex:1;border:1.5px solid #2a7d4f;color:#2a7d4f;border-radius:10px;padding:10px;text-align:center;font-size:13px">Good</div>
+      <div style="flex:1;background:#2a7d4f;color:#fff;border-radius:10px;padding:10px;text-align:center;font-size:13px">Easy</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- D2: Multiple choice ---------- -->
+<div style="position:absolute;left:460px;top:2372px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Quiz — multiple choice</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="padding:14px 16px 0;display:flex;align-items:center;gap:10px"><span style="font-size:15px;color:#aaa">✕</span><div style="flex:1;height:6px;background:#eee;border-radius:3px;overflow:hidden"><div style="width:60%;height:100%;background:#e8623d"></div></div><span style="font-size:13px;color:#e8623d">🔥 8</span></div>
+    <div style="flex:1;padding:18px 16px;display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:13px;color:#aaa;font-family:monospace">From “How interest rates ripple out”</span>
+      <div class="wf-h" style="font-size:20px;color:#2a2a2a;line-height:1.2">When central banks raise rates, borrowing costs generally…</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">
+        <div style="border:1.5px solid #d8d8d8;border-radius:12px;padding:13px;font-size:15px;color:#444">A · Fall for everyone</div>
+        <div style="border:2px solid #2a7d4f;background:#eef7f0;border-radius:12px;padding:13px;font-size:15px;color:#2a7d4f;display:flex;justify-content:space-between">B · Rise across the economy <span>✓</span></div>
+        <div style="border:1.5px solid #d8d8d8;border-radius:12px;padding:13px;font-size:15px;color:#444">C · Stay exactly flat</div>
+        <div style="border:1.5px solid #d8d8d8;border-radius:12px;padding:13px;font-size:15px;color:#444">D · Only affect mortgages</div>
+      </div>
+    </div>
+    <div style="padding:12px 16px 22px"><div style="background:#e8623d;color:#fff;border-radius:11px;padding:13px;text-align:center;font-size:16px">Next →</div></div>
+  </div>
+</div>
+
+<!-- ---------- D3: Results / streak ---------- -->
+<div style="position:absolute;left:840px;top:2372px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Session complete — streak</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;gap:16px;text-align:center">
+      <div style="font-size:54px">🔥</div>
+      <div class="wf-h" style="font-size:30px;font-weight:700;color:#2a2a2a">8-day streak!</div>
+      <div style="font-size:17px;color:#777">You recalled 4 of 5 cards</div>
+      <div style="width:100%;border:1.5px solid #d8d8d8;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between;font-size:14px;color:#555"><span>Level 4 · Scholar</span><span style="color:#aaa;font-family:monospace">320 / 500 XP</span></div>
+        <div style="height:9px;background:#eee;border-radius:5px;overflow:hidden"><div style="width:64%;height:100%;background:#e8623d"></div></div>
+        <div style="font-size:13px;color:#e8623d">+40 XP this session</div>
+      </div>
+      <div style="border:1.5px dashed #ccc;border-radius:12px;padding:11px 16px;font-size:14px;color:#888">Next review · tomorrow 9 AM</div>
+    </div>
+    <div style="padding:0 24px 24px;display:flex;flex-direction:column;gap:10px">
+      <div style="background:#e8623d;color:#fff;border-radius:12px;padding:13px;text-align:center;font-size:16px">Done</div>
+      <div style="text-align:center;font-size:14px;color:#999">↗ Share streak</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- D4: Stats / progress ---------- -->
+<div style="position:absolute;left:1220px;top:2372px;width:300px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;left:2px;font-size:16px;color:#555">Stats — progress &amp; retention</div>
+  <div style="background:#fff;border:2.5px solid #2a2a2a;border-radius:30px;box-shadow:0 2px 6px rgba(0,0,0,.1);height:620px;overflow:hidden;display:flex;flex-direction:column">
+    <div style="height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-size:12px;color:#aaa"><span>9:41</span><span>▦ ▦ ▮</span></div>
+    <div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:14px;overflow:hidden">
+      <span class="wf-h" style="font-size:22px;font-weight:700;color:#2a2a2a">Your progress</span>
+      <div style="display:flex;gap:10px">
+        <div style="flex:1;border:1.5px solid #d8d8d8;border-radius:12px;padding:11px;text-align:center"><div class="wf-h" style="font-size:24px;color:#2a2a2a">42</div><div style="font-size:12px;color:#999">saved</div></div>
+        <div style="flex:1;border:1.5px solid #d8d8d8;border-radius:12px;padding:11px;text-align:center"><div class="wf-h" style="font-size:24px;color:#e8623d">128</div><div style="font-size:12px;color:#999">reviewed</div></div>
+        <div style="flex:1;border:1.5px solid #d8d8d8;border-radius:12px;padding:11px;text-align:center"><div class="wf-h" style="font-size:24px;color:#2a2a2a">87%</div><div style="font-size:12px;color:#999">recall</div></div>
+      </div>
+      <div style="font-size:13px;color:#999">Review activity</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px">
+        <div style="width:22px;height:22px;border-radius:4px;background:#f6ddd2"></div><div style="width:22px;height:22px;border-radius:4px;background:#f0b89e"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div><div style="width:22px;height:22px;border-radius:4px;background:#eee"></div><div style="width:22px;height:22px;border-radius:4px;background:#f0b89e"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div>
+        <div style="width:22px;height:22px;border-radius:4px;background:#eee"></div><div style="width:22px;height:22px;border-radius:4px;background:#f6ddd2"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div><div style="width:22px;height:22px;border-radius:4px;background:#f0b89e"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div><div style="width:22px;height:22px;border-radius:4px;background:#f6ddd2"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div>
+        <div style="width:22px;height:22px;border-radius:4px;background:#f0b89e"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div><div style="width:22px;height:22px;border-radius:4px;background:#eee"></div><div style="width:22px;height:22px;border-radius:4px;background:#f6ddd2"></div><div style="width:22px;height:22px;border-radius:4px;background:#e8623d"></div><div style="width:22px;height:22px;border-radius:4px;background:#f0b89e"></div>
+      </div>
+      <div style="font-size:13px;color:#999;margin-top:2px">Top categories</div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div><div style="display:flex;justify-content:space-between;font-size:13px;color:#555"><span>Neuroscience</span><span style="color:#aaa">8</span></div><div style="height:8px;background:#eee;border-radius:4px;margin-top:4px;overflow:hidden"><div style="width:80%;height:100%;background:#e8623d"></div></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:13px;color:#555"><span>Productivity</span><span style="color:#aaa">6</span></div><div style="height:8px;background:#eee;border-radius:4px;margin-top:4px;overflow:hidden"><div style="width:60%;height:100%;background:#e8623d"></div></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:13px;color:#555"><span>Economics</span><span style="color:#aaa">5</span></div><div style="height:8px;background:#eee;border-radius:4px;margin-top:4px;overflow:hidden"><div style="width:48%;height:100%;background:#e8623d"></div></div></div>
+      </div>
+    </div>
+    <div style="height:52px;border-top:1.5px solid #e5e5e5;display:flex;align-items:center;justify-content:space-around;font-size:11px;color:#999"><div>⌂ Home</div><div>▤ Library</div><div>↻ Review</div><div style="color:#e8623d">◔ You</div></div>
+  </div>
+</div>
+
+<!-- closing post-it -->
+<div style="position:absolute;left:1560px;top:2400px;width:230px;background:#fef4a8;padding:14px;font-size:15px;line-height:1.35;color:#5a4a00;box-shadow:0 1px 3px rgba(0,0,0,.12);transform:rotate(1.5deg)">Grading by feel (Again / Hard / Good / Easy) feeds the spaced-repetition scheduler — no manual reminders to set. Streak + XP are the hook that brings people back to review.</div>
+
+</x-dc>
+</body>
+</html>

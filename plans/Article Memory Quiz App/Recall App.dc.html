@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; font-family:'Hanken Grotesk', sans-serif; -webkit-font-smoothing:antialiased; color:#1C1B17; }
+  .ed { font-family:'Newsreader', serif; }
+  .scr { background:#FBFAF6; border:1px solid #E7E5DE; border-radius:46px; box-shadow:0 18px 50px rgba(28,27,23,.10); width:330px; height:700px; overflow:hidden; display:flex; flex-direction:column; position:relative; }
+  .lbl { position:absolute; top:-26px; left:4px; font-size:15px; color:#6B6A63; }
+  .sb { position:relative; height:48px; flex:none; display:flex; align-items:center; justify-content:space-between; padding:0 26px; font-size:14px; font-weight:600; }
+  .isl { position:absolute; left:50%; top:11px; transform:translateX(-50%); width:78px; height:21px; background:#15140F; border-radius:12px; }
+  .thumb { background:#EAE5DA; display:flex; align-items:center; justify-content:center; flex:none; }
+  .navwrap { flex:none; height:64px; border-top:1px solid #ECEAE3; display:flex; padding:0 6px; background:#FFFDF9; }
+  .tab { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; color:#A6A399; font-size:10.5px; font-weight:500; }
+  .tab.on { color:#D2502E; }
+</style>
+</helmet>
+
+<!-- ===================== TITLE ===================== -->
+<div style="position:absolute;left:80px;top:0px;width:900px">
+  <div class="ed" style="font-size:44px;font-weight:600;color:#1C1B17;letter-spacing:-.01em">Recall — minimalist app design</div>
+  <div style="font-size:17px;color:#8A877E;margin-top:4px">Save a link → instant card with AI summary in progress → spaced-repetition recall. Editorial-minimal, one warm accent. Pan to explore.</div>
+</div>
+
+<!-- ============================================================= -->
+<!-- ROW 1 -->
+<!-- ============================================================= -->
+
+<!-- ---------- LOGIN ---------- -->
+<div style="position:absolute;left:80px;top:120px">
+  <div class="lbl">Sign in</div>
+  <div class="scr">
+    <div class="sb"><span>9:41</span><div class="isl"></div><span style="display:flex;align-items:center;gap:6px"><svg width="17" height="11" viewBox="0 0 18 12" fill="#1C1B17"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="1" y="1" width="21" height="11" rx="3.5" fill="none" stroke="#1C1B17" stroke-opacity=".35"/><rect x="3" y="3" width="15" height="7" rx="2" fill="#1C1B17"/><rect x="23.5" y="4" width="2" height="5" rx="1" fill="#1C1B17" fill-opacity=".35"/></svg></span></div>
+    <div style="flex:1;display:flex;flex-direction:column;padding:34px 28px 0">
+      <div style="display:flex;align-items:center;gap:9px"><div style="width:30px;height:30px;border-radius:9px;background:#D2502E;display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h12"/><path d="M4 12h16"/><path d="M4 18h9"/></svg></div><span style="font-weight:700;font-size:18px;letter-spacing:-.01em">Recall</span></div>
+      <div class="ed" style="font-size:36px;font-weight:500;line-height:1.08;letter-spacing:-.015em;margin-top:54px">Remember<br>what you read.</div>
+      <div style="font-size:15px;color:#8A877E;margin-top:14px;line-height:1.4">Save any article. We summarize it and quiz you so it actually sticks.</div>
+
+      <div style="margin-top:auto;display:flex;flex-direction:column;gap:11px;padding-bottom:30px">
+        <div style="border:1px solid #E2DFD6;border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:600;background:#fff">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.9z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1.1-3.8 1.1-2.9 0-5.4-2-6.3-4.6H2v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.7 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2a11 11 0 0 0 0 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 2 7.1l3.7 2.8C6.6 7.3 9.1 5.4 12 5.4z"/></svg>
+          Continue with Google
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;margin:2px 0"><div style="flex:1;height:1px;background:#EAE7DE"></div><span style="font-size:12px;color:#A6A399">or</span><div style="flex:1;height:1px;background:#EAE7DE"></div></div>
+        <div style="border:1px solid #E2DFD6;border-radius:14px;padding:14px;font-size:14px;color:#9C9A91;background:#fff">Email address</div>
+        <div style="border:1px solid #E2DFD6;border-radius:14px;padding:14px;font-size:14px;color:#9C9A91;background:#fff;display:flex;justify-content:space-between;align-items:center"><span>Password</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B7B4AA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div style="background:#D2502E;color:#fff;border-radius:14px;padding:15px;text-align:center;font-size:15px;font-weight:600;margin-top:2px">Log in</div>
+        <div style="text-align:center;font-size:14px;color:#8A877E;margin-top:4px">New here? <span style="color:#D2502E;font-weight:600">Create account</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- HOME ---------- -->
+<div style="position:absolute;left:490px;top:120px">
+  <div class="lbl">Home — save &amp; review</div>
+  <div class="scr">
+    <div class="sb"><span>9:41</span><div class="isl"></div><span style="display:flex;align-items:center;gap:6px"><svg width="17" height="11" viewBox="0 0 18 12" fill="#1C1B17"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="1" y="1" width="21" height="11" rx="3.5" fill="none" stroke="#1C1B17" stroke-opacity=".35"/><rect x="3" y="3" width="15" height="7" rx="2" fill="#1C1B17"/><rect x="23.5" y="4" width="2" height="5" rx="1" fill="#1C1B17" fill-opacity=".35"/></svg></span></div>
+    <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;padding:6px 22px 0">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div><div style="font-size:13px;color:#A6A399;font-weight:500">Saturday, Jun 28</div><div class="ed" style="font-size:30px;font-weight:500;letter-spacing:-.015em;line-height:1">Today</div></div>
+        <div style="display:flex;align-items:center;gap:6px;background:#FBEEE8;border-radius:999px;padding:6px 12px"><svg width="15" height="15" viewBox="0 0 24 24" fill="#D2502E"><path d="M12 2c.6 2.5 2.2 3.3 3.4 4.8C16.7 8.4 17 10 17 11.5a5 5 0 0 1-10 0c0-1.4.6-2.6 1.4-3.4.3 1.3 1.4 1.8 2.1 1.1.8-.8.2-2-.1-3 .5-1.9 1.3-3 1.6-4.2z"/></svg><span style="font-size:14px;font-weight:700;color:#D2502E">7</span></div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:9px;border:1.5px solid #1C1B17;border-radius:15px;padding:6px 6px 6px 14px;margin-top:18px">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9C9A91" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7L11.5 6.7"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7L12.5 17"/></svg>
+        <span style="flex:1;font-size:14.5px;color:#B0ADA3">Paste a link to save…</span>
+        <span style="background:#D2502E;color:#fff;border-radius:11px;padding:9px 18px;font-size:14px;font-weight:600">Save</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;background:#FBEEE8;border-radius:11px;padding:9px 12px;margin-top:9px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D2502E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="16" rx="2"/><path d="M9 4.5V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v.5"/></svg>
+        <span style="flex:1;font-size:13px;color:#C0512F">From clipboard · <span style="font-family:'Newsreader',serif">nautil.us/human-memory</span></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D2502E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      </div>
+
+      <div style="background:#1C1B17;border-radius:18px;padding:17px;margin-top:16px;color:#fff">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:13px;color:#C9C6BC;font-weight:500">Due for review</span><span style="font-size:13px;color:#E8866B;font-weight:600">~2 min</span></div>
+        <div class="ed" style="font-size:25px;font-weight:500;margin-top:4px">5 cards ready</div>
+        <div style="display:flex;gap:5px;margin-top:13px">
+          <div style="height:5px;flex:1;background:#D2502E;border-radius:3px"></div><div style="height:5px;flex:1;background:#D2502E;border-radius:3px"></div><div style="height:5px;flex:1;background:#46443C;border-radius:3px"></div><div style="height:5px;flex:1;background:#46443C;border-radius:3px"></div><div style="height:5px;flex:1;background:#46443C;border-radius:3px"></div>
+        </div>
+        <div style="background:#D2502E;color:#fff;border-radius:12px;padding:12px;text-align:center;font-size:14.5px;font-weight:600;margin-top:14px">Start review</div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px"><span style="font-size:13px;color:#A6A399;font-weight:600;letter-spacing:.02em;text-transform:uppercase">Recently saved</span></div>
+      <div style="display:flex;gap:11px;align-items:center;margin-top:12px">
+        <div class="thumb" style="width:46px;height:46px;border-radius:11px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div>
+        <div style="flex:1;min-width:0"><div class="ed" style="font-size:15.5px;font-weight:500;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">The Deep Roots of Human Memory</div>
+          <div style="display:inline-flex;align-items:center;gap:5px;margin-top:6px;background:#FBEEE8;border-radius:999px;padding:3px 9px"><svg width="11" height="11" viewBox="0 0 24 24" fill="#D2502E"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg><span style="font-size:11px;color:#D2502E;font-weight:600">AI summarizing…</span></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:11px;align-items:center;margin-top:14px">
+        <div class="thumb" style="width:46px;height:46px;border-radius:11px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div>
+        <div style="flex:1;min-width:0"><div class="ed" style="font-size:15.5px;font-weight:500;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">How interest rates ripple out</div>
+          <div style="font-size:12px;color:#A6A399;margin-top:5px">Economics · 6 min</div>
+        </div>
+      </div>
+    </div>
+    <div class="navwrap">
+      <div class="tab on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>Home</div>
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Library</div>
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 1 2.6 6.1"/><path d="M3 20v-5h5"/></svg>Review</div>
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>You</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- LIBRARY ---------- -->
+<div style="position:absolute;left:900px;top:120px">
+  <div class="lbl">Library — auto-categorized</div>
+  <div class="scr">
+    <div class="sb"><span>9:41</span><div class="isl"></div><span style="display:flex;align-items:center;gap:6px"><svg width="17" height="11" viewBox="0 0 18 12" fill="#1C1B17"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="1" y="1" width="21" height="11" rx="3.5" fill="none" stroke="#1C1B17" stroke-opacity=".35"/><rect x="3" y="3" width="15" height="7" rx="2" fill="#1C1B17"/><rect x="23.5" y="4" width="2" height="5" rx="1" fill="#1C1B17" fill-opacity=".35"/></svg></span></div>
+    <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;padding:6px 22px 0">
+      <div class="ed" style="font-size:30px;font-weight:500;letter-spacing:-.015em">Library</div>
+      <div style="display:flex;align-items:center;gap:9px;background:#F1EFE8;border-radius:13px;padding:11px 13px;margin-top:14px">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#A6A399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span style="font-size:14px;color:#A6A399">Search title, tag or text…</span>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:20px"><span class="ed" style="font-size:18px;font-weight:500">Neuroscience</span><span style="font-size:13px;color:#A6A399">8 saved</span></div>
+      <div style="display:flex;gap:11px;margin-top:11px">
+        <div style="width:130px;flex:none"><div class="thumb" style="height:84px;border-radius:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div><div class="ed" style="font-size:13.5px;line-height:1.2;margin-top:8px">The Deep Roots of Human Memory</div></div>
+        <div style="width:130px;flex:none"><div class="thumb" style="height:84px;border-radius:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div><div class="ed" style="font-size:13.5px;line-height:1.2;margin-top:8px">Why we forget what we read</div></div>
+        <div style="width:46px;flex:none"><div class="thumb" style="height:84px;border-radius:13px"></div></div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:20px"><span class="ed" style="font-size:18px;font-weight:500">Economics</span><span style="font-size:13px;color:#A6A399">5 saved</span></div>
+      <div style="display:flex;gap:11px;margin-top:11px">
+        <div style="width:130px;flex:none"><div class="thumb" style="height:84px;border-radius:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div><div class="ed" style="font-size:13.5px;line-height:1.2;margin-top:8px">How interest rates ripple out</div></div>
+        <div style="width:130px;flex:none"><div class="thumb" style="height:84px;border-radius:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div><div class="ed" style="font-size:13.5px;line-height:1.2;margin-top:8px">The quiet power of compounding</div></div>
+        <div style="width:46px;flex:none"><div class="thumb" style="height:84px;border-radius:13px"></div></div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:20px"><span class="ed" style="font-size:18px;font-weight:500">Productivity</span><span style="font-size:13px;color:#A6A399">6 saved</span></div>
+      <div style="display:flex;gap:11px;margin-top:11px">
+        <div style="width:130px;flex:none"><div class="thumb" style="height:84px;border-radius:13px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div></div>
+        <div style="width:130px;flex:none"><div class="thumb" style="height:84px;border-radius:13px"></div></div>
+      </div>
+    </div>
+    <div class="navwrap">
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>Home</div>
+      <div class="tab on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Library</div>
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 1 2.6 6.1"/><path d="M3 20v-5h5"/></svg>Review</div>
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>You</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- ARTICLE SUMMARY ---------- -->
+<div style="position:absolute;left:1310px;top:120px">
+  <div class="lbl">Article — AI summary</div>
+  <div class="scr">
+    <div class="sb"><span>9:41</span><div class="isl"></div><span style="display:flex;align-items:center;gap:6px"><svg width="17" height="11" viewBox="0 0 18 12" fill="#1C1B17"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="1" y="1" width="21" height="11" rx="3.5" fill="none" stroke="#1C1B17" stroke-opacity=".35"/><rect x="3" y="3" width="15" height="7" rx="2" fill="#1C1B17"/><rect x="23.5" y="4" width="2" height="5" rx="1" fill="#1C1B17" fill-opacity=".35"/></svg></span></div>
+    <div style="flex:1;overflow:hidden;display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;padding:2px 20px 12px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg>
+        <div style="display:flex;gap:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17l-6-4-6 4z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg></div>
+      </div>
+      <div style="padding:0 22px;overflow:hidden;display:flex;flex-direction:column">
+        <div class="thumb" style="height:120px;border-radius:16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div>
+        <div class="ed" style="font-size:24px;font-weight:500;line-height:1.12;letter-spacing:-.01em;margin-top:14px">The Deep Roots of Human Memory</div>
+        <div style="font-size:12.5px;color:#A6A399;margin-top:7px">nautil.us · 11 min read · saved 2d ago</div>
+
+        <div style="display:flex;background:#F1EFE8;border-radius:11px;padding:3px;margin-top:16px;font-size:12.5px;font-weight:600">
+          <div style="flex:1;text-align:center;padding:8px;background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)">TL;DR</div>
+          <div style="flex:1;text-align:center;padding:8px;color:#9C9A91">Key points</div>
+          <div style="flex:1;text-align:center;padding:8px;color:#9C9A91">Full</div>
+        </div>
+        <div style="background:#FBEEE8;border-radius:14px;padding:15px;margin-top:13px">
+          <div style="display:flex;align-items:center;gap:6px"><svg width="13" height="13" viewBox="0 0 24 24" fill="#D2502E"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg><span style="font-size:11.5px;font-weight:700;color:#D2502E;letter-spacing:.04em">TL;DR</span></div>
+          <div class="ed" style="font-size:17px;line-height:1.32;margin-top:8px;color:#3A382F">Memory isn't a recording — it's reconstruction. Every time you recall something you rebuild and slightly rewrite it, which is why spaced review beats re-reading.</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:11px;border:1px solid #E7E5DE;border-radius:13px;padding:11px 14px;margin-top:13px">
+          <div style="width:34px;height:34px;border-radius:50%;background:#1C1B17;display:flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+          <div style="flex:1"><div style="font-size:13.5px;font-weight:600">Listen to summary</div><div style="font-size:11.5px;color:#A6A399;margin-top:2px">0:48 · narrated</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:none;display:flex;gap:10px;padding:13px 22px 24px;border-top:1px solid #ECEAE3;background:#FBFAF6">
+      <div style="flex:1;border:1.5px solid #1C1B17;border-radius:13px;padding:13px;text-align:center;font-size:14px;font-weight:600">Read full ↗</div>
+      <div style="flex:1;background:#D2502E;color:#fff;border-radius:13px;padding:13px;text-align:center;font-size:14px;font-weight:600">Quiz me</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================= -->
+<!-- ROW 2 -->
+<!-- ============================================================= -->
+
+<!-- ---------- IN-APP BROWSER ---------- -->
+<div style="position:absolute;left:80px;top:880px">
+  <div class="lbl">In-app browser</div>
+  <div class="scr">
+    <div class="sb"><span>9:41</span><div class="isl"></div><span style="display:flex;align-items:center;gap:6px"><svg width="17" height="11" viewBox="0 0 18 12" fill="#1C1B17"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="1" y="1" width="21" height="11" rx="3.5" fill="none" stroke="#1C1B17" stroke-opacity=".35"/><rect x="3" y="3" width="15" height="7" rx="2" fill="#1C1B17"/><rect x="23.5" y="4" width="2" height="5" rx="1" fill="#1C1B17" fill-opacity=".35"/></svg></span></div>
+    <div style="flex:none;display:flex;align-items:center;gap:10px;padding:4px 18px 12px;border-bottom:1px solid #ECEAE3">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#F1EFE8;border-radius:9px;padding:7px 10px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8A877E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span style="font-size:12.5px;color:#6B6A63">nautil.us</span></div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 1 2.6 6.1"/><path d="M3 20v-5h5"/></svg>
+    </div>
+    <div style="flex:1;overflow:hidden;padding:20px 24px;display:flex;flex-direction:column;gap:11px;position:relative">
+      <div class="ed" style="font-size:23px;font-weight:500;line-height:1.15;color:#1C1B17">The Deep Roots of Human Memory</div>
+      <div style="font-size:12px;color:#A6A399;margin-bottom:2px">By Veronique Greenwood</div>
+      <div class="thumb" style="height:96px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B9B2A2" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m4 17 4.5-4 3.5 3 3-2.5L21 17"/></svg></div>
+      <div style="height:9px;width:100%;background:#EDEAE2;border-radius:5px;margin-top:4px"></div>
+      <div style="height:9px;width:96%;background:#EDEAE2;border-radius:5px"></div>
+      <div style="height:9px;width:100%;background:#F6DDD2;border-radius:5px"></div>
+      <div style="height:9px;width:62%;background:#F6DDD2;border-radius:5px"></div>
+      <div style="height:9px;width:98%;background:#EDEAE2;border-radius:5px"></div>
+      <div style="height:9px;width:90%;background:#EDEAE2;border-radius:5px"></div>
+      <div style="height:9px;width:94%;background:#EDEAE2;border-radius:5px"></div>
+      <div style="position:absolute;left:20px;right:20px;bottom:16px;background:#1C1B17;color:#fff;border-radius:14px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 8px 24px rgba(28,27,23,.22)">
+        <span style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600"><svg width="15" height="15" viewBox="0 0 24 24" fill="#E8866B"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Show AI summary</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8866B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 15 6-6 6 6"/></svg>
+      </div>
+    </div>
+    <div style="flex:none;height:56px;border-top:1px solid #ECEAE3;display:flex;align-items:center;justify-content:space-around;background:#FFFDF9;color:#6B6A63">
+      <span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#D2502E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l3.5-.8 10-10-2.7-2.7-10 10z"/><path d="M14 6.5 17.5 10"/></svg>Highlight</span>
+      <span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500"><svg width="17" height="17" viewBox="0 0 24 24" fill="#1C1B17" stroke="#1C1B17" stroke-width="1.5" stroke-linejoin="round"><path d="M6 4h12v17l-6-4-6 4z"/></svg>Saved</span>
+      <span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1C1B17" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="17" cy="6" r="2.4"/><circle cx="17" cy="18" r="2.4"/><path d="m8.2 11 6.6-3.6M8.2 13l6.6 3.6"/></svg>Share</span>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- FLASHCARD ---------- -->
+<div style="position:absolute;left:490px;top:880px">
+  <div class="lbl">Recall — flashcard</div>
+  <div class="scr">
+    <div class="sb"><span>9:41</span><div class="isl"></div><span style="display:flex;align-items:center;gap:6px"><svg width="17" height="11" viewBox="0 0 18 12" fill="#1C1B17"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="1" y="1" width="21" height="11" rx="3.5" fill="none" stroke="#1C1B17" stroke-opacity=".35"/><rect x="3" y="3" width="15" height="7" rx="2" fill="#1C1B17"/><rect x="23.5" y="4" width="2" height="5" rx="1" fill="#1C1B17" fill-opacity=".35"/></svg></span></div>
+    <div style="flex:none;display:flex;align-items:center;gap:13px;padding:6px 22px 16px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9C9A91" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      <div style="flex:1;height:6px;background:#EDEAE2;border-radius:4px;overflow:hidden"><div style="width:40%;height:100%;background:#D2502E"></div></div>
+      <span style="font-size:13px;color:#A6A399;font-weight:600">2/5</span>
+    </div>
+    <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;padding:0 22px">
+      <div style="display:inline-flex;align-self:flex-start;align-items:center;gap:6px;background:#F1EFE8;border-radius:999px;padding:5px 11px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8A877E" stroke-width="1.8" stroke-linejoin="round"><path d="M6 4h12v17l-6-4-6 4z"/></svg><span style="font-size:11.5px;color:#6B6A63;font-weight:500">Human Memory</span></div>
+      <div style="flex:1;background:#fff;border:1px solid #E7E5DE;border-radius:22px;box-shadow:0 8px 30px rgba(28,27,23,.07);margin-top:16px;padding:26px 24px;display:flex;flex-direction:column">
+        <span style="font-size:11px;font-weight:700;color:#A6A399;letter-spacing:.1em">QUESTION</span>
+        <div class="ed" style="font-size:25px;font-weight:500;line-height:1.18;letter-spacing:-.01em;margin-top:12px">Why does spaced review beat cramming?</div>
+        <div style="border-top:1px solid #ECEAE3;margin-top:auto;padding-top:18px">
+          <span style="font-size:11px;font-weight:700;color:#D2502E;letter-spacing:.1em">ANSWER</span>
+          <div style="font-size:15px;line-height:1.42;color:#3A382F;margin-top:9px">Each spaced recall forces your brain to rebuild the memory trace — strengthening long-term retention far more than massed repetition does.</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:none;display:flex;gap:8px;padding:16px 22px 26px">
+      <div style="flex:1;border:1px solid #E7E5DE;border-radius:13px;padding:12px 0;text-align:center;font-size:13px;font-weight:600;color:#B23A2A">Again</div>
+      <div style="flex:1;border:1px solid #E7E5DE;border-radius:13px;padding:12px 0;text-align:center;font-size:13px;font-weight:600;color:#6B6A63">Hard</div>
+      <div style="flex:1;border:1px solid #E7E5DE;border-radius:13px;padding:12px 0;text-align:center;font-size:13px;font-weight:600;color:#3F7A53">Good</div>
+      <div style="flex:1;background:#3F7A53;border-radius:13px;padding:12px 0;text-align:center;font-size:13px;font-weight:600;color:#fff">Easy</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- RESULTS ---------- -->
+<div style="position:absolute;left:900px;top:880px">
+  <div class="lbl">Session complete</div>
+  <div class="scr">
+    <div class="sb"><span>9:41</span><div class="isl"></div><span style="display:flex;align-items:center;gap:6px"><svg width="17" height="11" viewBox="0 0 18 12" fill="#1C1B17"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="1" y="1" width="21" height="11" rx="3.5" fill="none" stroke="#1C1B17" stroke-opacity=".35"/><rect x="3" y="3" width="15" height="7" rx="2" fill="#1C1B17"/><rect x="23.5" y="4" width="2" height="5" rx="1" fill="#1C1B17" fill-opacity=".35"/></svg></span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 30px;text-align:center">
+      <div style="width:96px;height:96px;border-radius:50%;background:#FBEEE8;display:flex;align-items:center;justify-content:center"><svg width="46" height="46" viewBox="0 0 24 24" fill="#D2502E"><path d="M12 2c.6 2.5 2.2 3.3 3.4 4.8C16.7 8.4 17 10 17 11.5a5 5 0 0 1-10 0c0-1.4.6-2.6 1.4-3.4.3 1.3 1.4 1.8 2.1 1.1.8-.8.2-2-.1-3 .5-1.9 1.3-3 1.6-4.2z"/></svg></div>
+      <div class="ed" style="font-size:34px;font-weight:500;letter-spacing:-.015em;margin-top:22px">8-day streak</div>
+      <div style="font-size:15px;color:#8A877E;margin-top:6px">You recalled 4 of 5 cards today</div>
+
+      <div style="width:100%;border:1px solid #E7E5DE;border-radius:18px;padding:18px;margin-top:30px;text-align:left;background:#fff">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:14px;font-weight:600">Level 4 · Scholar</span><span style="font-size:12.5px;color:#A6A399">320 / 500 XP</span></div>
+        <div style="height:9px;background:#EDEAE2;border-radius:5px;margin-top:11px;overflow:hidden"><div style="width:64%;height:100%;background:#D2502E;border-radius:5px"></div></div>
+        <div style="font-size:13px;color:#D2502E;font-weight:600;margin-top:9px">+40 XP this session</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:16px;font-size:13.5px;color:#8A877E"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A6A399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Next review · tomorrow, 9:00 AM</div>
+    </div>
+    <div style="flex:none;padding:0 30px 28px;display:flex;flex-direction:column;gap:12px">
+      <div style="background:#1C1B17;color:#fff;border-radius:14px;padding:15px;text-align:center;font-size:15px;font-weight:600">Done</div>
+      <div style="text-align:center;font-size:14px;color:#8A877E;font-weight:500">Share streak</div>
+    </div>
+  </div>
+</div>
+
+<!-- ---------- STATS ---------- -->
+<div style="position:absolute;left:1310px;top:880px">
+  <div class="lbl">You — progress &amp; retention</div>
+  <div class="scr">
+    <div class="sb"><span>9:41</span><div class="isl"></div><span style="display:flex;align-items:center;gap:6px"><svg width="17" height="11" viewBox="0 0 18 12" fill="#1C1B17"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="2.5" width="3" height="9.5" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1"/></svg><svg width="24" height="12" viewBox="0 0 26 13"><rect x="1" y="1" width="21" height="11" rx="3.5" fill="none" stroke="#1C1B17" stroke-opacity=".35"/><rect x="3" y="3" width="15" height="7" rx="2" fill="#1C1B17"/><rect x="23.5" y="4" width="2" height="5" rx="1" fill="#1C1B17" fill-opacity=".35"/></svg></span></div>
+    <div style="flex:1;overflow:hidden;display:flex;flex-direction:column;padding:6px 22px 0">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:46px;height:46px;border-radius:50%;background:#1C1B17;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:17px">A</div>
+        <div><div class="ed" style="font-size:21px;font-weight:500;line-height:1">Your progress</div><div style="font-size:12.5px;color:#A6A399;margin-top:2px">Member since Mar 2026</div></div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:18px">
+        <div style="flex:1;border:1px solid #E7E5DE;border-radius:14px;padding:13px 6px;text-align:center;background:#fff"><div class="ed" style="font-size:24px;font-weight:500">42</div><div style="font-size:11px;color:#A6A399;margin-top:2px">Saved</div></div>
+        <div style="flex:1;border:1px solid #E7E5DE;border-radius:14px;padding:13px 6px;text-align:center;background:#fff"><div class="ed" style="font-size:24px;font-weight:500;color:#D2502E">128</div><div style="font-size:11px;color:#A6A399;margin-top:2px">Reviewed</div></div>
+        <div style="flex:1;border:1px solid #E7E5DE;border-radius:14px;padding:13px 6px;text-align:center;background:#fff"><div class="ed" style="font-size:24px;font-weight:500">87%</div><div style="font-size:11px;color:#A6A399;margin-top:2px">Recall</div></div>
+      </div>
+
+      <div style="font-size:12px;color:#A6A399;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:22px">Last 5 weeks</div>
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:11px">
+        <div style="aspect-ratio:1;border-radius:5px;background:#F0EDE5"></div><div style="aspect-ratio:1;border-radius:5px;background:#F6DDD2"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#F0EDE5"></div><div style="aspect-ratio:1;border-radius:5px;background:#EBA98F"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div>
+        <div style="aspect-ratio:1;border-radius:5px;background:#EBA98F"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#F0EDE5"></div><div style="aspect-ratio:1;border-radius:5px;background:#F6DDD2"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#EBA98F"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div>
+        <div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#F0EDE5"></div><div style="aspect-ratio:1;border-radius:5px;background:#EBA98F"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#F6DDD2"></div><div style="aspect-ratio:1;border-radius:5px;background:#F0EDE5"></div>
+        <div style="aspect-ratio:1;border-radius:5px;background:#F6DDD2"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#EBA98F"></div><div style="aspect-ratio:1;border-radius:5px;background:#F0EDE5"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div>
+        <div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#EBA98F"></div><div style="aspect-ratio:1;border-radius:5px;background:#F0EDE5"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#F6DDD2"></div><div style="aspect-ratio:1;border-radius:5px;background:#D2502E"></div><div style="aspect-ratio:1;border-radius:5px;background:#EBA98F"></div>
+      </div>
+
+      <div style="font-size:12px;color:#A6A399;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:22px">Top topics</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
+        <div><div style="display:flex;justify-content:space-between;font-size:13px"><span>Neuroscience</span><span style="color:#A6A399">8</span></div><div style="height:7px;background:#EDEAE2;border-radius:4px;margin-top:5px;overflow:hidden"><div style="width:80%;height:100%;background:#D2502E"></div></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:13px"><span>Productivity</span><span style="color:#A6A399">6</span></div><div style="height:7px;background:#EDEAE2;border-radius:4px;margin-top:5px;overflow:hidden"><div style="width:60%;height:100%;background:#D2502E"></div></div></div>
+        <div><div style="display:flex;justify-content:space-between;font-size:13px"><span>Economics</span><span style="color:#A6A399">5</span></div><div style="height:7px;background:#EDEAE2;border-radius:4px;margin-top:5px;overflow:hidden"><div style="width:48%;height:100%;background:#D2502E"></div></div></div>
+      </div>
+    </div>
+    <div class="navwrap">
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>Home</div>
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>Library</div>
+      <div class="tab"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 1 2.6 6.1"/><path d="M3 20v-5h5"/></svg>Review</div>
+      <div class="tab on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>You</div>
+    </div>
+  </div>
+</div>
+
+<template id="__bundler_thumbnail" data-bg-color="#FBFAF6">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FBFAF6"/>
+    <rect x="470" y="210" width="260" height="380" rx="44" fill="#FFFFFF" stroke="#E7E5DE" stroke-width="3"/>
+    <rect x="510" y="300" width="60" height="60" rx="16" fill="#D2502E"/>
+    <rect x="510" y="392" width="180" height="20" rx="10" fill="#1C1B17"/>
+    <rect x="510" y="424" width="120" height="20" rx="10" fill="#EAE5DA"/>
+    <rect x="510" y="486" width="180" height="44" rx="14" fill="#D2502E"/>
+  </svg>
+</template>
+</x-dc>
+</body>
+</html>
