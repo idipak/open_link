@@ -29,8 +29,6 @@ class AppRouter {
       GlobalKey<NavigatorState>(debugLabel: 'home');
   static final _shellNavigatorLibraryKey =
       GlobalKey<NavigatorState>(debugLabel: 'library');
-  static final _shellNavigatorReviewKey =
-      GlobalKey<NavigatorState>(debugLabel: 'review');
   static final _shellNavigatorProfileKey =
       GlobalKey<NavigatorState>(debugLabel: 'profile');
 
@@ -71,16 +69,7 @@ class AppRouter {
               ),
             ],
           ),
-          StatefulShellBranch(
-            navigatorKey: _shellNavigatorReviewKey,
-            routes: [
-              GoRoute(
-                path: AppRoutes.review,
-                name: 'review',
-                builder: (context, state) => const ReviewScreen(),
-              ),
-            ],
-          ),
+
           StatefulShellBranch(
             navigatorKey: _shellNavigatorProfileKey,
             routes: [
@@ -95,6 +84,12 @@ class AppRouter {
       ),
 
       // Full-screen routes (above the shell, no nav bar)
+      GoRoute(
+        path: AppRoutes.review,
+        name: 'review',
+        parentNavigatorKey: _rootNavigatorKey,
+        builder: (context, state) => const ReviewScreen(),
+      ),
       GoRoute(
         path: AppRoutes.articleDetail,
         name: 'articleDetail',
